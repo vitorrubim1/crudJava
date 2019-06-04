@@ -100,18 +100,25 @@ public class escolha extends javax.swing.JFrame {
         
         new Thread () {
             public void run (){
-                for (int i=0; i<=100; i++)
+                for (int i=0; i<=65; i++)
             {
                 try{
-                    sleep(70);
+                    sleep(40);
                     barra.setValue(i); 
                     
-                    if (barra.getValue()<=10){
-                        msgBarra.setText("Aguarde um momento..");
+                    if (barra.getValue()<=30){
+                        msgBarra.setText("Aguarde um momento.");
                     }else if (barra .getValue()<=40){
+                            msgBarra.setText("Aguarde um momento..");
+                    }  else if (barra .getValue()<=50){
                             msgBarra.setText("Aguarde um momento...");
                         
-                        }else {
+                        }              
+                    else if (barra .getValue()<=60){
+                            msgBarra.setText("Aguarde um momento....");
+                        
+                        }
+                        else {
                             msgBarra.setText("Abertura concluída.");
                         }
            
